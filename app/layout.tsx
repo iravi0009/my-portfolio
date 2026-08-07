@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-domain.vercel.app"), // Change after deployment
+  metadataBase: new URL("https://rajravi.vercel.app"), // Change after deployment
 
   title: {
     default: "Ravi Raj | Software Engineer",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     description:
       "Software Engineer specializing in Full Stack Development, Artificial Intelligence, and Machine Learning.",
 
-    url: "https://your-domain.vercel.app",
+    url: "https://rajravi.vercel.app",
 
     siteName: "Ravi Raj Portfolio",
 
