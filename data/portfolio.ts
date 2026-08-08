@@ -146,6 +146,24 @@ linkedin: "https://www.linkedin.com/in/raviraj0009/",
 
       demo: "",
     },
+
+    {
+      title: "Inventory Management System",
+
+      description: 
+      "Developed a CLI-based inventory system with product CRUD, stock movement tracking, automated audit logs, low-stock alerts, supplier analytics, and inventory valuation.",
+   
+     technologies:[
+     "Python",
+     "SQLite",
+     "CLI",
+     "Tabulate",
+     ],
+
+     github: "https://github.com/iravi0009/inventory-management-system",
+     demo:"",
+    },
+
   ],
 
 // ===========================

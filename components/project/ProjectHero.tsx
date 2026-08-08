@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import {
-  GithubIcon,
+  Github,
   ExternalLink,
   Calendar,
   FolderOpen,
@@ -91,7 +91,7 @@ export default function ProjectHero({ project }: Props) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold transition hover:bg-blue-700"
             >
-              <GithubIcon size={20} />
+              <Github size={20} />
               GitHub
             </a>
 
