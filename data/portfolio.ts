@@ -18,7 +18,7 @@ aboutHighlights: [
 
 stats: {
   experience: "Fresher",
-  projects: "10+",
+  projects: "5+",
   technologies: "25+",
   education: "B.E. CSBS",
 },
@@ -177,23 +177,25 @@ education: [
 // ===========================
 certifications: [
   {
-    title: "Google Data Analytics",
-    issuer: "Coursera",
+    title: "Oracle  Cloud Infrastructure 2025 Certified Data Science Professional",
+    issuer: "Oracle",
     year: "2025",
-    link: "#",
+    link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=6219178F1E9C9FAADDCC8C5A318EA5B9C872A30F91AEABE29881916F6CA48A0E",
+  },
+
+  {
+    title: "Tata - Data Visualisation: Empowering Business with Effective Insights Job Simulation",
+    issuer: "Forage",
+    year: "2025",
+    link: "https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_nvGGsweSAwKWr3dSs_1756892276630_completion_certificate.pdf",
   },
   {
-    title: "Python for Data Science",
-    issuer: "IBM",
+    title: "Tata - GenAI Powered Data Analytics Job Simulation",
+    issuer: "Forage",
     year: "2025",
-    link: "#",
+    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_nvGGsweSAwKWr3dSs_1754810244354_completion_certificate.pdf",
   },
-  {
-    title: "Machine Learning",
-    issuer: "Coursera",
-    year: "2026",
-    link: "#",
-  },
+
 ],
 
 // ===========================

@@ -23,29 +23,30 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 
   try {
     const result = await emailjs.sendForm(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-      formRef.current,
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-    );
-
+  process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+  process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+  formRef.current!,
+  {
+    publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+  }
+);
     console.log("Email sent:", result);
 
     setMessage("✅ Your message has been sent successfully!");
 
     formRef.current.reset();
-  }catch (error: unknown) {
+} catch (error) {
   console.error("EmailJS Error:", error);
 
-  if (error instanceof Error) {
-    alert(error.message);
-  } else {
-    alert(JSON.stringify(error));
+  if (typeof error === "object" && error !== null) {
+    console.log("Status:", (error as { status?: number }).status);
+    console.log("Text:", (error as { text?: string }).text);
   }
 
-  setMessage("❌ Failed to send message. Please try again.");
+  alert(JSON.stringify(error));
 
-  } finally {
+  setMessage("❌ Failed to send message. Please try again.");
+}finally {
     setLoading(false);
   }
 }
