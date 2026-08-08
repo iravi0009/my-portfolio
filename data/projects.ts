@@ -178,6 +178,86 @@ const projects: Project[] = [
       "/projects/dnn/2.png",
     ],
   },
+
+  {
+  slug: "inventory-management",
+
+  title: "Inventory Management System",
+
+  category: "Backend Development",
+
+  year: "2026",
+
+  description:
+    "CLI-based inventory management system built with Python and SQLite.",
+
+  longDescription:
+    "Developed an end-to-end inventory management application for managing products, tracking stock movements, maintaining automatic audit logs, generating inventory analytics, and providing low-stock alerts through a clean command-line interface.",
+
+  techStack: [
+    "Python",
+    "SQLite",
+    "SQL",
+    "Tabulate",
+    "CLI",
+  ],
+
+  features: [
+    "Product CRUD Operations",
+    "Stock IN/OUT Tracking",
+    "Stock Adjustment",
+    "Automatic Audit Logging",
+    "Low-Stock Alerts",
+    "Inventory Analytics",
+    "Supplier Stock Summary",
+    "Inventory Value Reports",
+  ],
+
+  challenges: [
+    "Database relationship design",
+    "Stock consistency management",
+    "Transaction tracking",
+    "Low-stock threshold handling",
+    "Analytics query optimization",
+  ],
+
+  architecture: [
+    "CLI Interface",
+    "Product Management",
+    "Stock Management",
+    "SQLite Database",
+    "Transaction Logging",
+    "Analytics & Reports",
+  ],
+
+  metrics: [
+    {
+      title: "Database",
+      value: "SQLite",
+    },
+    {
+      title: "Tables",
+      value: "5",
+    },
+    {
+      title: "Interface",
+      value: "CLI",
+    },
+  ],
+
+  github: "https://github.com/iravi0009",
+
+  live: "",
+
+  image: "/projects/inventory/cover.png",
+
+  gallery: [
+    "/projects/inventory/1.png",
+    "/projects/inventory/2.png",
+    "/projects/inventory/3.png",
+    "/projects/inventory/4.png",
+  ],
+},
 ];
 
 export default projects;
