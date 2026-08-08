@@ -18,10 +18,10 @@ export default function CustomCursor() {
   });
 
   useEffect(() => {
-    function moveCursor(e: MouseEvent) {
+    const moveCursor = (e: MouseEvent) => {
       mouseX.set(e.clientX - 10);
       mouseY.set(e.clientY - 10);
-    }
+    };
 
     window.addEventListener("mousemove", moveCursor);
 
@@ -32,11 +32,30 @@ export default function CustomCursor() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed left-0 top-0 z-[9999] h-5 w-5 rounded-full bg-blue-500 shadow-[0_0_20px_#3b82f6]"
+      className="
+        pointer-events-none
+        fixed
+        left-0
+        top-0
+        z-[9999]
+        flex
+        h-5
+        w-5
+        items-center
+        justify-center
+        rounded-md
+        bg-blue-500
+        text-white
+        shadow-[0_0_15px_rgba(59,130,246,0.6)]
+      "
       style={{
         x,
         y,
       }}
-    />
+    >
+      <span className="text-[13px] font-bold leading-none">
+        ↖
+      </span>
+    </motion.div>
   );
 }

@@ -33,3 +33,9 @@ input,
 textarea {
   cursor: text;
 }
+
+html,
+body,
+* {
+  cursor: none !important;
+}
