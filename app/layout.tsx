@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+import Chatbot from "@/components/chatbot/Chatbot";
 import ClientLayout from "@/components/layout/ClientLayout";
+import CommandMenu from "@/components/common/CommandMenu";
+import ParticleBackground from "@/components/common/ParticleBackground";
+import GradientBackground from "@/components/common/GradientBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rajravi.vercel.app"), // Change after deployment
+  metadataBase: new URL("https://rajravi.vercel.app"),
 
   title: {
     default: "Ravi Raj | Software Engineer",
@@ -46,7 +51,6 @@ export const metadata: Metadata = {
   ],
 
   creator: "Ravi Raj",
-
   publisher: "Ravi Raj",
 
   robots: {
@@ -100,13 +104,28 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-     <body
-  className={`${geistSans.variable} ${geistMono.variable} min-h-full bg-black text-white antialiased`}
->
-  <ClientLayout>
-    {children}
-  </ClientLayout>
-</body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} min-h-full bg-black text-white antialiased`}
+      >
+        {/* Animated background */}
+        <GradientBackground />
+
+        {/* Particle background */}
+        <ParticleBackground />
+
+        {/* Command menu */}
+        <CommandMenu />
+
+        {/* Global chatbot */}
+        <Chatbot />
+
+        {/* Existing client layout */}
+        <ClientLayout>
+          {children}
+        </ClientLayout>
+
+
+      </body>
     </html>
   );
 }

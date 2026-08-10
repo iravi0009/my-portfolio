@@ -8,6 +8,7 @@ import GradientBackground from "@/components/common/GradientBackground";
 import CustomCursor from "@/components/common/CustomCursor";
 import ScrollProgress from "@/components/common/ScrollProgress";
 import CommandMenu from "@/components/common/CommandMenu";
+import Chatbot from "../chatbot/Chatbot";
 
 export default function ClientLayout({
   children,
@@ -36,7 +37,7 @@ export default function ClientLayout({
           <ScrollProgress />
           <CommandMenu />
           <BackToTop />
-
+          <Chatbot />
           {children}
         </>
       )}
