@@ -5,7 +5,6 @@ import BackToTop from "@/components/common/BackToTop";
 import LoadingScreen from "@/components/common/LoadingScreen";
 import ParticleBackground from "@/components/common/ParticleBackground";
 import GradientBackground from "@/components/common/GradientBackground";
-import CustomCursor from "@/components/common/CustomCursor";
 import ScrollProgress from "@/components/common/ScrollProgress";
 import CommandMenu from "@/components/common/CommandMenu";
 import Chatbot from "../chatbot/Chatbot";
@@ -33,7 +32,6 @@ export default function ClientLayout({
         <>
           <GradientBackground />
           <ParticleBackground />
-          <CustomCursor />
           <ScrollProgress />
           <CommandMenu />
           <BackToTop />
