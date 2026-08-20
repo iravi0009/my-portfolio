@@ -19,45 +19,53 @@ export default function GitHub() {
         {/* Contribution Calendar */}
         <div className="mb-10 overflow-hidden rounded-2xl border border-gray-800 bg-zinc-900 p-5">
           <img
-            src={`https://ghchart.rshah.org/3b82f6/iravi0009`}
-            alt="GitHub Contribution Graph"
-            className="w-full rounded-lg"
+            src={`https://ghchart.rshah.org/3b82f6/${username}`}
+            alt={`${username} GitHub contribution graph`}
+            className="h-auto w-full rounded-lg"
+            loading="lazy"
           />
         </div>
 
-        {/* Stats */}
+        {/* GitHub Statistics */}
         <div className="grid gap-8 lg:grid-cols-2">
+          {/* GitHub Stats */}
+          <div className="overflow-hidden rounded-2xl border border-gray-800 bg-zinc-900 p-5">
+            <img
+              src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=tokyonight&hide_border=true`}
+              alt={`${username} GitHub statistics`}
+              className="h-auto w-full rounded-xl"
+              loading="lazy"
+            />
+          </div>
 
-          <img
-            src={`https://github-readme-stats.vercel.app/api?username=iravi0009&show_icons=true&theme=tokyonight`}
-            alt="GitHub Stats"
-            className="w-full rounded-xl"
-          />
-
-          <img
-            src={`https://github-readme-stats.vercel.app/api/top-langs/?username=iravi0009&layout=compact&theme=tokyonighte`}
-            alt="Top Languages"
-            className="w-full rounded-xl"
-          />
-
+          {/* Top Languages */}
+          <div className="overflow-hidden rounded-2xl border border-gray-800 bg-zinc-900 p-5">
+            <img
+              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=tokyonight&hide_border=true`}
+              alt={`${username} most used programming languages`}
+              className="h-auto w-full rounded-xl"
+              loading="lazy"
+            />
+          </div>
         </div>
 
-        {/* Streak */}
+        {/* GitHub Streak */}
         <div className="mt-8 overflow-hidden rounded-2xl border border-gray-800 bg-zinc-900 p-5">
           <img
-            src={`https://streak-stats.demolab.com?user=iravi0009&theme=tokyonight`}
-            alt="GitHub Streak"
-            className="mx-auto"
+            src={`https://streak-stats.demolab.com?user=${username}&theme=tokyonight&hide_border=true`}
+            alt={`${username} GitHub contribution streak`}
+            className="mx-auto h-auto max-w-full rounded-xl"
+            loading="lazy"
           />
         </div>
 
-        {/* Button */}
+        {/* GitHub Profile Button */}
         <div className="mt-10 text-center">
           <a
             href={portfolioData.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center rounded-xl bg-blue-600 px-6 py-3 text-lg font-semibold transition hover:bg-blue-700"
+            className="inline-flex items-center rounded-xl bg-blue-600 px-6 py-3 text-lg font-semibold text-white transition hover:bg-blue-700"
           >
             🐙 Visit GitHub Profile
           </a>
