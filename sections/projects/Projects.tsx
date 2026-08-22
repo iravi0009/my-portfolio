@@ -12,9 +12,9 @@ export default function Projects() {
         <SectionTitle>Featured Projects</SectionTitle>
 
         <p className="mx-auto mb-14 mt-4 max-w-3xl text-center text-lg leading-8 text-gray-400">
-          A collection of software engineering, AI/ML, and full-stack projects
-          that demonstrate my ability to design scalable applications, solve
-          real-world problems, and build production-ready solutions.
+          A collection of software development, backend, AI/ML, and full-stack
+          projects that demonstrate my ability to design scalable applications,
+          solve real-world problems, and build production-ready solutions.
         </p>
 
         <div className="grid gap-8 md:grid-cols-2">

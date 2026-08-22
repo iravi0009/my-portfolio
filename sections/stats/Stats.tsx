@@ -13,7 +13,8 @@ export default function Stats() {
 
         <p className="mx-auto mt-4 mb-12 max-w-3xl text-center text-lg text-gray-400">
           A quick overview of my technical experience, research work,
-          and continuous learning as an aspiring Software Engineer.
+          and continuous learning as a Software Developer focused on
+          Backend Development, Full Stack Development, and AI/ML.
         </p>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

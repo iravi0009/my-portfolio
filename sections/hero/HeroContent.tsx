@@ -36,9 +36,10 @@ export default function HeroContent() {
       >
         <TypeAnimation
           sequence={[
-            "Software Engineer", 2000,
+            "Software Developer", 2000,
             "Backend Developer", 2000,
             "Full Stack Developer", 2000,
+            "Software Engineer", 2000,
             "AI Engineer", 2000,
             "Machine Learning Engineer", 2000,
           ]}
@@ -56,7 +57,7 @@ export default function HeroContent() {
         transition={{ duration: 0.7, delay: 0.6 }}
         className="text-xl font-semibold text-blue-400"
       >
-        Passionate About Software Engineering, AI & Backend Development
+        Passionate About Software Development, Backend Engineering & AI
       </motion.p>
 
       {/* Description */}

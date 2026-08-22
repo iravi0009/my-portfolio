@@ -29,9 +29,9 @@ export default function Footer() {
               </h2>
 
               <p className="mt-4 leading-7 text-gray-400">
-                Software Engineer passionate about building scalable web
-                applications, AI-powered solutions, and modern digital
-                experiences.
+                Software Developer passionate about building scalable backend
+                systems, full stack applications, AI-powered solutions, and modern
+                digital experiences.
               </p>
             </div>
 

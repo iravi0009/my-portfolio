@@ -10,10 +10,10 @@ export default function ContactInfo() {
       </h3>
 
       <p className="mt-4 leading-7 text-gray-400">
-        I am always open to discussing Software Engineering opportunities,
-        Backend Development, Full Stack Development, AI/ML projects,
-        internships, full-time roles, or freelance collaborations.
-        Feel free to connect with me.
+        I am open to Software Developer opportunities, with a strong interest
+        in Backend Development, Full Stack Development, and AI/ML projects.
+        I am also interested in internships, full-time roles, and freelance
+        collaborations. Feel free to connect with me.
       </p>
 
       {/* Contact Details */}
@@ -84,9 +84,9 @@ export default function ContactInfo() {
         </p>
 
         <ul className="mt-6 space-y-3 text-gray-300">
-          <li>✅ Software Engineer (Fresher)</li>
-          <li>✅ Software Development Engineer (SDE)</li>
+          <li>✅ Software Development Engineer (Fresher)</li>
           <li>✅ Backend Developer</li>
+          <li>✅ Software Engineer </li>
           <li>✅ AI / Machine Learning Engineer</li>
           <li>✅ Internship Opportunities</li>
           <li>✅ Full-Time Opportunities</li>
