@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   X,
   ArrowLeft,
@@ -30,6 +30,8 @@ type ChatSession = {
   messages: Message[];
   createdAt: string;
 };
+
+const HISTORY_STORAGE_KEY = "ravi-ai-chat-history";
 
 const suggestedQuestions = [
   {
@@ -62,7 +64,7 @@ const welcomeMessage: Message = {
   id: "welcome",
   role: "assistant",
   content:
-    "Hi! 👋 I'm Ravi AI, Ravi Raj's portfolio assistant.\n\nI can tell you about his **skills, projects, education, research, career interests, and GitHub**.\n\nWhat would you like to know?",
+    "Hi! 👋 I'm Ravi AI, Ravi Raj's portfolio assistant.\n\nI can tell you about his **skills, projects, completed education, research, career interests, and GitHub**.\n\nWhat would you like to know?",
 };
 
 export default function Chatbot() {
@@ -79,34 +81,56 @@ export default function Chatbot() {
   const [showHistory, setShowHistory] = useState(false);
 
   /*
-   * Load chat history from localStorage
+   * Load chat history from localStorage.
+   *
+   * IMPORTANT:
+   * We intentionally do NOT load localStorage inside useEffect.
+   * This avoids the React warning:
+   *
+   * "Calling setState synchronously within an effect can trigger
+   * cascading renders."
+   *
+   * History is loaded only when the user opens the History panel.
    */
-  useEffect(() => {
+  function loadHistory() {
     try {
       const savedHistory = localStorage.getItem(
-        "ravi-ai-chat-history"
+        HISTORY_STORAGE_KEY
       );
 
-      if (savedHistory) {
-        setHistory(JSON.parse(savedHistory));
+      if (!savedHistory) {
+        setHistory([]);
+        return;
+      }
+
+      const parsedHistory = JSON.parse(savedHistory);
+
+      if (Array.isArray(parsedHistory)) {
+        setHistory(parsedHistory);
+      } else {
+        setHistory([]);
       }
     } catch (error) {
       console.error(
         "Failed to load chat history:",
         error
       );
+
+      setHistory([]);
     }
-  }, []);
+  }
 
   /*
    * Save history to localStorage
    */
-  function saveHistory(updatedHistory: ChatSession[]) {
+  function saveHistory(
+    updatedHistory: ChatSession[]
+  ) {
     setHistory(updatedHistory);
 
     try {
       localStorage.setItem(
-        "ravi-ai-chat-history",
+        HISTORY_STORAGE_KEY,
         JSON.stringify(updatedHistory)
       );
     } catch (error) {
@@ -118,7 +142,20 @@ export default function Chatbot() {
   }
 
   /*
-   * Send message to Gemini API
+   * Open / close history.
+   *
+   * History is loaded only when opening the panel.
+   */
+  function toggleHistory() {
+    if (!showHistory) {
+      loadHistory();
+    }
+
+    setShowHistory((previous) => !previous);
+  }
+
+  /*
+   * Send message to AI API
    */
   async function handleSend(message: string) {
     const trimmedMessage = message.trim();
@@ -193,8 +230,8 @@ export default function Chatbot() {
   /*
    * BACK BUTTON
    *
-   * Important:
-   * This does NOT clear the conversation.
+   * Closes/minimizes the chatbot.
+   * Current conversation remains in state.
    */
   function handleBack() {
     setOpen(false);
@@ -251,7 +288,9 @@ export default function Chatbot() {
   /*
    * Open an old conversation
    */
-  function openHistorySession(session: ChatSession) {
+  function openHistorySession(
+    session: ChatSession
+  ) {
     setMessages(session.messages);
     setShowHistory(false);
     setOpen(true);
@@ -278,7 +317,7 @@ export default function Chatbot() {
 
     try {
       localStorage.removeItem(
-        "ravi-ai-chat-history"
+        HISTORY_STORAGE_KEY
       );
     } catch (error) {
       console.error(
@@ -397,11 +436,7 @@ export default function Chatbot() {
                 {/* HISTORY */}
 
                 <button
-                  onClick={() =>
-                    setShowHistory(
-                      (previous) => !previous
-                    )
-                  }
+                  onClick={toggleHistory}
                   className="
                     rounded-xl
                     p-2
@@ -438,9 +473,9 @@ export default function Chatbot() {
 
             {!showHistory && (
               <p className="mt-3 text-xs leading-5 text-gray-500">
-                Ask me about Ravi's professional
-                background, projects, skills, education,
-                research, or career interests.
+                Ask me about Ravi is professional
+                background, projects, skills, completed
+                education, research, or career interests.
               </p>
             )}
           </div>

@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { GoogleGenAI } from "@google/genai";
+import Groq from "groq-sdk";
 import chatbotKnowledge from "@/data/chatbotKnowledge";
 
-const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY,
+const groq = new Groq({
+  apiKey: process.env.GROQ_API_KEY,
 });
 
 export async function POST(request: Request) {
@@ -78,7 +78,7 @@ RESPONSE RULES
 
 9. For skills questions, group skills into categories.
 
-10. For education questions, clearly mention the degree and current academic status.
+10. For education questions, clearly mention the degree and academic status.
 
 11. For career questions, clearly list relevant roles.
 
@@ -101,13 +101,24 @@ ANSWER
 ========================
 `;
 
-    const response = await ai.models.generateContent({
-      model: "gemini-3.6-flash",
-      contents: prompt,
+    const response = await groq.chat.completions.create({
+      model: "openai/gpt-oss-20b",
+      messages: [
+        {
+          role: "system",
+          content: prompt,
+        },
+        {
+          role: "user",
+          content: message,
+        },
+      ],
+      temperature: 0.3,
+      max_tokens: 500,
     });
 
     const reply =
-      response.text?.trim() ||
+      response.choices[0]?.message?.content?.trim() ||
       "I couldn't generate a response right now.";
 
     return NextResponse.json({

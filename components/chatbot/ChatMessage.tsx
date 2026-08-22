@@ -27,7 +27,9 @@ export default function ChatMessage({
         }`}
       >
         {isUser ? (
-          <p className="whitespace-pre-wrap">{content}</p>
+          <p className="whitespace-pre-wrap">
+            {content}
+          </p>
         ) : (
           <div className="prose prose-invert prose-sm max-w-none">
             <ReactMarkdown
@@ -39,7 +41,7 @@ export default function ChatMessage({
                 ),
 
                 h2: ({ children }) => (
-                  <h2 className="mb-2 mt-1 text-base font-bold text-white">
+                  <h2 className="mb-2 mt-3 text-base font-bold text-white">
                     {children}
                   </h2>
                 ),
@@ -57,19 +59,21 @@ export default function ChatMessage({
                 ),
 
                 ul: ({ children }) => (
-                  <ul className="mb-3 ml-4 list-disc space-y-1">
+                  <ul className="mb-3 ml-5 list-disc space-y-1">
                     {children}
                   </ul>
                 ),
 
                 ol: ({ children }) => (
-                  <ol className="mb-3 ml-4 list-decimal space-y-1">
+                  <ol className="mb-3 ml-5 list-decimal space-y-1">
                     {children}
                   </ol>
                 ),
 
                 li: ({ children }) => (
-                  <li>{children}</li>
+                  <li className="pl-1">
+                    {children}
+                  </li>
                 ),
 
                 strong: ({ children }) => (
@@ -78,15 +82,63 @@ export default function ChatMessage({
                   </strong>
                 ),
 
+                em: ({ children }) => (
+                  <em className="text-gray-300">
+                    {children}
+                  </em>
+                ),
+
+                blockquote: ({ children }) => (
+                  <blockquote className="my-3 border-l-2 border-blue-500 pl-3 text-gray-400">
+                    {children}
+                  </blockquote>
+                ),
+
+                code: ({ children }) => (
+                  <code className="rounded-md bg-black/40 px-1.5 py-0.5 font-mono text-xs text-blue-300">
+                    {children}
+                  </code>
+                ),
+
+                pre: ({ children }) => (
+                  <pre className="my-3 overflow-x-auto rounded-xl border border-zinc-800 bg-black p-4 text-xs leading-5">
+                    {children}
+                  </pre>
+                ),
+
                 a: ({ href, children }) => (
                   <a
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-medium text-blue-400 underline underline-offset-2 hover:text-blue-300"
+                    className="font-medium text-blue-400 underline underline-offset-2 transition hover:text-blue-300"
                   >
                     {children}
                   </a>
+                ),
+
+                hr: () => (
+                  <hr className="my-4 border-zinc-800" />
+                ),
+
+                table: ({ children }) => (
+                  <div className="my-3 overflow-x-auto rounded-lg border border-zinc-800">
+                    <table className="w-full text-left text-xs">
+                      {children}
+                    </table>
+                  </div>
+                ),
+
+                th: ({ children }) => (
+                  <th className="border-b border-zinc-800 bg-zinc-950 px-3 py-2 font-semibold text-white">
+                    {children}
+                  </th>
+                ),
+
+                td: ({ children }) => (
+                  <td className="border-b border-zinc-800 px-3 py-2 text-gray-300">
+                    {children}
+                  </td>
                 ),
               }}
             >
