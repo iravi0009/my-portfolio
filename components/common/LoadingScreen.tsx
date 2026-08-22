@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 type LoadingScreenProps = {
@@ -22,7 +23,7 @@ export default function LoadingScreen({
             },
           }}
         >
-          {/* Logo */}
+          {/* Profile Photo */}
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{
@@ -32,9 +33,16 @@ export default function LoadingScreen({
             transition={{
               duration: 0.8,
             }}
-            className="mb-8 rounded-full border border-blue-500/30 bg-blue-500/10 px-10 py-8 text-6xl font-bold text-blue-400"
+            className="mb-8 h-[170px] w-[170px] overflow-hidden rounded-full border border-blue-500/30 bg-blue-500/10"
           >
-            RR
+            <Image
+              src="/profile.png"
+              alt="Ravi Raj"
+              width={170}
+              height={170}
+              priority
+              className="h-full w-full rounded-full object-cover"
+            />
           </motion.div>
 
           {/* Name */}
@@ -52,6 +60,7 @@ export default function LoadingScreen({
             Ravi Raj
           </motion.h1>
 
+          {/* Role */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -78,6 +87,7 @@ export default function LoadingScreen({
             />
           </div>
 
+          {/* Loading Text */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{
