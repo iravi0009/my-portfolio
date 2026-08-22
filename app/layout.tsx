@@ -22,26 +22,35 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rajravi.vercel.app"),
 
   title: {
-    default: "Ravi Raj | Software Engineer",
+    default: "Ravi Raj | Software Developer",
     template: "%s | Ravi Raj",
   },
 
   description:
-    "Software Engineer specializing in Full Stack Development, AI, Machine Learning, and Backend Engineering. Explore my portfolio, projects, IEEE research papers, and technical skills.",
+    "Ravi Raj is a Software Developer specializing in Backend Engineering, Full Stack Development, Artificial Intelligence, and Machine Learning. Explore his projects, IEEE research, technical skills, and software development work.",
 
   keywords: [
     "Ravi Raj",
-    "Software Engineer",
-    "Full Stack Developer",
+    "Software Developer",
+    "Software Development",
     "Backend Developer",
-    "AI Engineer",
+    "Backend Engineering",
+    "Full Stack Developer",
+    "AI Developer",
+    "Artificial Intelligence",
     "Machine Learning",
-    "Next.js",
-    "React",
+    "Python Developer",
+    "C++ Developer",
+    "Next.js Developer",
+    "React Developer",
     "TypeScript",
-    "Portfolio",
-    "IEEE Research",
+    "REST API",
+    "FastAPI",
+    "Flask",
+    "MySQL",
     "TensorFlow",
+    "IEEE Research",
+    "Software Developer Portfolio",
   ],
 
   authors: [
@@ -59,14 +68,14 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Ravi Raj | Software Engineer",
+    title: "Ravi Raj | Software Developer",
 
     description:
-      "Software Engineer specializing in Full Stack Development, Artificial Intelligence, and Machine Learning.",
+      "Ravi Raj is a Software Developer specializing in Backend Engineering, Full Stack Development, Artificial Intelligence, and Machine Learning.",
 
     url: "https://rajravi.vercel.app",
 
-    siteName: "Ravi Raj Portfolio",
+    siteName: "Ravi Raj | Software Developer",
 
     locale: "en_US",
 
@@ -77,7 +86,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Ravi Raj Portfolio",
+        alt: "Ravi Raj | Software Developer Portfolio",
       },
     ],
   },
@@ -85,10 +94,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Ravi Raj | Software Engineer",
+    title: "Ravi Raj | Software Developer",
 
     description:
-      "Software Engineer specializing in Full Stack Development, AI, and Backend Engineering.",
+      "Ravi Raj is a Software Developer specializing in Backend Engineering, Full Stack Development, Artificial Intelligence, and Machine Learning.",
 
     images: ["/og-image.png"],
   },
@@ -119,12 +128,10 @@ export default function RootLayout({
         {/* Global chatbot */}
         <Chatbot />
 
-        {/* Existing client layout */}
+        {/* Client layout */}
         <ClientLayout>
           {children}
         </ClientLayout>
-
-
       </body>
     </html>
   );
