@@ -60,7 +60,7 @@ export default function LoadingScreen({
             }}
             className="mt-3 text-xl text-blue-400"
           >
-            Software Engineer
+            Software Developer
           </motion.p>
 
           {/* Progress Bar */}

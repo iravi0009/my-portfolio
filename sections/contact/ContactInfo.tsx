@@ -76,11 +76,8 @@ export default function ContactInfo() {
         </h4>
 
         <p className="mt-3 leading-7 text-gray-300">
-          As a final-year Computer Science student, I am actively seeking
-          opportunities to begin my professional career in software
-          development. I am passionate about building scalable applications,
-          solving real-world problems, and continuously learning modern
-          technologies while contributing to innovative teams.
+          As a Computer Science graduate, I am seeking Software Developer opportunities focused on Backend Development, Full Stack Development, and AI/ML. 
+          Passionate about building scalable solutions and solving real-world problems.
         </p>
 
         <ul className="mt-6 space-y-3 text-gray-300">
