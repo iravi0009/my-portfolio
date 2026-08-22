@@ -34,11 +34,12 @@ const timeline = [
       "Research papers on Autonomous DNN Repair and Handwritten Character Recognition accepted at IEEE conferences.",
     icon: "🏛️",
   },
+
   {
     year: "Now",
-    title: "Seeking Software Engineering Opportunities",
+    title: "Seeking Software Developer Opportunities",
     description:
-      "Actively looking for Software Engineer, Backend Developer, and AI Engineer roles.",
+    "Actively seeking Software Developer, Backend Developer, and AI/ML opportunities.",
     icon: "🚀",
   },
 ];

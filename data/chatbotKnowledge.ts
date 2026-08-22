@@ -13,7 +13,16 @@ He enjoys building scalable web applications, AI-powered solutions, and solving 
 
 ## Skills
 
-### Programming Languages
+### Programming LanguagesRavi Raj is a Software Developer with practical experience in backend development,
+relational database design, REST API development, and applied machine learning
+optimization.
+
+He is interested in Backend Development, Full Stack Development, Artificial
+Intelligence, Machine Learning, Data Analytics, and software optimization.
+
+He enjoys building data-driven applications, scalable web applications, backend
+systems, AI-powered solutions, and solving real-world problems through technology.
+
 - Python
 - C++
 - JavaScript
@@ -159,47 +168,12 @@ The project focuses on creating useful AI-powered conversational experiences.
 
 ---
 
-### 6. Water Jug Problem Solver
-
-An AI problem-solving application using:
-- A* Search
-- State-space search
-- Tkinter
-- Python
-
-The application includes a GUI and hint system.
-
----
-
-### 7. Student Performance Prediction System
-
-A machine-learning project for predicting student performance.
-
-It demonstrates:
-- Data preprocessing
-- Machine Learning
-- Regression
-- Classification
-- Python
-
----
-
-### 8. Task Scheduling and Optimization System
-
-A task scheduling project using:
-- Greedy Algorithms
-- Priority Queues
-- Data Structures and Algorithms
-
-The project focuses on optimizing task execution and scheduling efficiency.
-
----
-
 ## Education
 
-Ravi Raj is pursuing a Bachelor's degree in Computer Science / Computer Science and Business Systems.
+Ravi Raj completed a Bachelor of Engineering (B.E.) in Computer Science & Business Systems
+from Chandigarh University, Mohali, with a CGPA of 7.94 / 10.
 
-He is currently a final-year student.
+Education period: 2022–2026.
 
 ---
 
@@ -223,10 +197,10 @@ Ravi has also worked on handwritten Devanagari character recognition using a sep
 
 Ravi is currently interested in opportunities such as:
 
-- Software Engineer
 - Software Development Engineer (SDE)
 - Backend Developer
 - Full Stack Developer
+-Software Engineer
 - AI Engineer
 - Machine Learning Engineer
 - Software Engineering internships
